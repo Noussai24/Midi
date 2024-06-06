@@ -248,7 +248,7 @@ def pick_random_chord():
 
 # Function to calculate the interval between two MIDI note values
 def calculate_interval(note1, note2):
-    return note2 - note1
+    return abs (note2 - note1)
 
 # Function to evaluate the stability of the transition between two chords
 def evaluate_stability(chord1, chord2):
