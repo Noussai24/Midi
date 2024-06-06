@@ -12,8 +12,12 @@ jobs:
       - checkout
       - python/install-packages
       - run:
+          name: Install dependencies tests
+          command: pip install pytest pytest-cov
+      - run:
           name: Run tests
           command: pytest --junitxml=junit.xml || ((($? == 5)) && echo 'Did not find any tests to run.')
+          
       - store_test_results:
           path: junit.xml
   deploy:
