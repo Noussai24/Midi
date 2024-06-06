@@ -1,5 +1,5 @@
 import pytest
-from chord_generator import pick_random_chord, calculate_interval,chords, evaluate_stability
+from ..chord_generator import pick_random_chord, calculate_interval,chords, evaluate_stability
 
 @pytest.fixture
 def get_chords_Cmin():
