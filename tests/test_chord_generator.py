@@ -1,8 +1,5 @@
 import pytest
-
-from chord_generator import pick_random_chord, calculate_interval
-
-from chord_generator import chords
+from chord_generator import pick_random_chord, calculate_interval,chords, evaluate_stability
 
 @pytest.fixture
 def get_chords_Cmin():
@@ -16,6 +13,9 @@ def get_chords_Emaj():
 def test_pick_random_chord():
     chord = pick_random_chord()
     assert chord in chords
+
+def test_evaluate_stability():
+    assert evaluate_stability('Cmin', 'Emaj')== 100
 
 def test_pick_not_in_chi_chord():
     not_chord = 'Cmin42'
