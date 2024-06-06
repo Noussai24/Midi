@@ -1,6 +1,7 @@
 import random
 import math
 from mido import Message, MidiFile, MidiTrack, MetaMessage, bpm2tempo
+# importer des fonctions
 
 #Define the notes for the chords in Ab minor (Abm, Dbm, Ebm)
 chords = {
